@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/adminIndex.css">
+
+</head>
+<%-include('../partials/navbar.ejs')%>
+
+<body class="boostrap">
+    
+    <div class="container">
+
+        
+            <div class="d-grid gap-2">
+                <br>
+                <a href="/admin/articles" class="btn-dark">
+                    <button type="button" class="btn btn-success btn-block btn-lg ">Articles</button>
+                </a>
+
+                <br>
+
+                <a href="/admin/categories" class="btn-dark">
+                    <button type="button" class="btn btn-success btn-block btn-lg">Categories</button>
+                </a>
+
+                <br>
+
+                <a href="/admin/users" class="btn-dark">
+                    <button type="button" class="btn btn-success btn-block btn-lg">Users</button>
+                </a>
+            </div>
+
+        
+
+
+    </div>
+
+
+</body>
+
+<%-include('../partials/footer.ejs')%>

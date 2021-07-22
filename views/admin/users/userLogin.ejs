@@ -1,0 +1,41 @@
+<%-include('../../partials/header.ejs')%>
+
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+    <a class="navbar-brand" href="/">
+        Blog
+    </a>
+    <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+            <a class="nav-link" href="/">Home</a>
+            
+        </li>
+    </ul>
+
+</nav>
+
+
+<body>
+    <div class="container">
+    
+        <div class="card mt-4">
+            <div class="card-header">
+                <h1>Login:</h1>
+            </div>
+    
+    
+            <div class="card-body">
+                <form action="/authenticate" method="POST">
+                    <label for="">Email:</label>
+                    <input class="form-control" type="email" name="email" id="" placeholder="email@example.com">
+                    <br>
+                    <label for="">Password:</label>
+                    <input class="form-control" type="password" name="password" placeholder="*********" id="">
+                    <br>
+                    <button class="btn btn-success btn-block" type="submit">Login</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+<%-include('../../partials/footer.ejs')%>

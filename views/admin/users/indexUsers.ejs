@@ -1,0 +1,59 @@
+<%-include('../../partials/header.ejs')%>
+
+<%-include('../../partials/navbar.ejs')%>
+
+<body>
+   
+    <div class="container">
+        <br>
+        <h2>Users</h2>
+        <br>
+        <a class="btn btn-success" href="/admin/users/create">New User</a>
+        <hr>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Email</th>
+                    <th>Actions</th>
+    
+                </tr>
+            </thead>
+            <tbody>
+                
+                <%users.forEach(user =>{  %>
+                    <tr>
+                        <td><%=user.id%></td>
+                        <td><%=user.email%></td>
+                        <td>
+                            
+                            <form method="POST" action="/users/delete" style="display: inline;" onsubmit="confirmDelete(event, this)">
+                                <input type="hidden" name="id" value="<%= user.id %>">
+                                <button class="btn btn-danger" >Delete</button>
+                            </form>
+                        </td>
+                    </tr>
+                <%})%>
+            </tbody>
+    
+        </table>
+    
+       </div>
+
+</body>
+
+<%-include('../../partials/footer.ejs')%>
+<script>
+    function confirmDelete(event, form){
+        event.preventDefault();
+        var decision = confirm("Confirm your action:");
+        if (decision){
+            form.submit();
+        }
+    }
+</script>
+
+
+
+
+

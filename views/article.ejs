@@ -1,0 +1,32 @@
+<%-include('./partials/header.ejs')%>
+
+
+<body>
+   <%-include('./partials/homenavbar.ejs')%>
+   
+   <div class="container">
+      <br>
+        <div class="card">
+            
+            <div class="card-header">
+                <h4><%=article.title%></h4>
+            </div>
+
+            <div class="card-body">
+                <%- article.body %><!-- - to show like tinymce   -->
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col col-12">
+                  <a href="javascript:history.back()" style="color: rgb(64, 64, 75); float: left;">< < < Go back </a>
+            </div>
+         </div>
+
+   </div>
+
+</body>
+
+
+ <%- include('./partials/footer.ejs') %>
